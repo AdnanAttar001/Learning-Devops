@@ -1,0 +1,46 @@
+***** if else *****
+
+if [ condition ]
+then
+    # Run this if the condition is TRUE
+else
+    # Run this if the condition is FALSE
+fi
+
+if -> Check a condition
+[ condition ] -> The condition to check
+then -> Do this if the condition is true
+else -> Do this if the condition is false
+fi -> End the if statement
+
+if starts the decision, and fi ends it.
+
+-----------------------------------------
+
+#!/bin/bash
+
+NUMBER=15
+
+if [ "$NUMBER" -gt 10 ]
+then
+    echo "Number is greater than 10"
+else
+    echo "Number is 10 or less"
+fi
+
+You may change the number values
+
+----------------------------------------
+
+The most important comparison operators
+
+Number comparisons
+
+Operator  Meaning
+-eq       equal to
+-ne       not equal to
+-gt       greater than
+-lt       less than
+-ge       greater than or equal to
+-le       less than or equal to
+
