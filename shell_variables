@@ -1,0 +1,18 @@
+***** Variables *****
+
+NAME="Adnan"
+AGE=28
+CITY=Pune
+
+echo "My name is $NAME"
+echo "My age is $AGE"
+echo "My city is $CITY"
+
+NAME="Adnan" -> Assign a value -> Store Adnan
+$NAME -> Read a value -> Get Adnan
+
+
+CURRENT_USER=$(Whoami)
+echo "Current user is $CURRENT_USER"
+
+$(whoami) runs the command and stores its output in the variable.

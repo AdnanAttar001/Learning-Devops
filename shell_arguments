@@ -1,0 +1,62 @@
+***** Arguments *****
+
+#!/bin/bash
+
+echo "Hello $1"
+
+You may pass any name in first argument
+
+$0 -> Script name or path -> ./greet.sh
+$1 -> First argument -> Adnan
+
+--------------------------------------------------
+
+#!/bin/bash
+
+NAME=$1
+AGE=$2
+
+echo "My name is $NAME"
+echo "My age is $AGE"
+
+You may change the Name and Age in arguments
+
+NAME=$1 stores the first argument in the variable NAME.
+AGE=$2 stores the second argument in the variable AGE.
+echo displays the values.
+
+-------------------------------------------------------
+
+#!/bin/bash
+
+echo "Script name: $0"
+echo "Total arguments: $#"
+echo "First argument: $1"
+echo "Second argument: $2"
+
+You may pass the multiple arguments, the Total arguments number will change
+
+$# — count the arguments
+
+----------------------------------------------------------------------------
+
+#!/bin/bash
+
+echo "All names: $@"
+
+You may pass unlimited arguments
+
+$@ — use all arguments
+
+----------------------------------------------------------------------------
+
+The important argument symbols
+
+Symbol   Meaning                                Example
+$0       Script name or path                    ./greet.sh
+$1       First argument                         Adnan
+$2       Second argument                        28
+$3       Third argument                         Pune
+$#       Number of arguments                    3
+$@       All arguments, kept as separate words  All supplied inputs
+$?       Exit status of the previous command    0 usually means success

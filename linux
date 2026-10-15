@@ -1,0 +1,155 @@
+. Basic Commands
+
+ls : to list the directory and files
+cd : to redirect to any folder/directory
+pwd : to check the present working directory
+mkdir : to create a new directory
+rm : to remove/delete the files
+rmdir : to remove the folder/directory
+cat, zcat : to view the files
+touch : to create a new files
+head : to view the top lines of the files
+tail, tail -f : to view the bottom lines of the files
+less, more : to view thww files in a pagenated way
+cp, cp -r : to copy the files and folders
+mv : to move the files and also to rename the files and directories
+wc : to count the words from the files
+vi, vim : to edit the files
+ln (Hardlink & Softlink) : to create the shortcut of the files
+cut : to cut the context or specific text from the files
+tee : to print and insert the file
+sort : to sort the files in alphabatically
+clear : to clear the screen or terminal
+diff : to check the difference between the files
+ssh : to connect the remote VM or Instance with local system
+df : to check the storage and disk of the system
+du : to check the storage and folders
+ps : to check the bash and id
+top : to check the all running processes in the system
+fuser : to check the file system process
+kill : to kill any of the process
+nohup : to store the output in file
+free : to check the RAM and storage
+vmstat : to check the RAM and Stats
+
+
+. System Level Commands
+
+uname : to check which platform is in current use
+uptime : to check the uptime of the system
+date : to check the current date of the system
+who, whoami : to check which user is logged in when/ and check the current user
+which : to check the version and location
+id : to check the GID and user
+sudo (Super User Do) : to get the access and permission
+shutdown : to shutdown the system
+reboot : to reboot the system
+apt : to update and install the new packages on the system
+
+
+. User & Group Management Commands
+
+sudo (Super User Do) : to get the access and permission
+useradd -m : to add the new user in the home
+whoami : to check the current user
+su : to switch the users
+passwd : to set the password of the users
+userdel : to delete the users
+groupadd : to create new groups for the users
+gpasswd -a, -m : to add users into the groups
+groupdel : to delete the groups
+
+
+. File Permission Commands
+
+umask : to check the by default permissions
+ls -l : to check the permissions of the files and folders
+chmod : to change the permissions of the files
+chown : to change the ownership of the files
+chgrp : to change the ownership of the groups
+
+
+. Compression Commands
+
+zip, gunzip, gzip : to compress the files
+tar, untar : to compress the files
+
+
+. File Transfer Commands
+
+scp : to copy the files and folders from local to remote
+rsync : to sync the files and folders between local and remote
+
+
+. File Permissions : 
+
+0 - - -
+1 - - x
+2 - w -
+3 - w x
+4 r - -
+5 r - x
+6 r w -
+7 r w x
+
+
+. Networking Commands
+
+ping : to check the connectivity and reachability of the website or ip
+nestat : to check the internet connection and network
+ifconfig : to check the IP & network interface
+traceroute, tracepath : to trace the routes of the website
+mtr : to check the path and ping
+nslookup : to check the domain and ip
+telnet : to check the domain and port no
+hostname : to check the hostname of the system
+IP : to check the IP of the system
+iwconfig : to check the wireless connection
+ss : to check the internet connection and networks
+arp : to find the MAC address of the system
+dig : to check where is the website is hosted
+whois : to check the full details with proper info
+route : to check the routes
+nmap : to scan the websites
+wget : to download the files from the web
+watch : to check the status for every 2 sec
+curl : to call the API endpoint
+jq : to sort the API's
+
+
+. Curl vs Wget
+
+wget : used to get the data from the Web
+curl : used to get the data from the Web & API testing
+
+
+. Process Management 
+
+ps: to check the process
+ps -e : to check the processes in detail
+ps aux : to check the processes in more detail
+ps -ef : to check the process parent and child
+
+
+. AWK , SED , GREP
+
+grep 'pattern' file name : to find the words and lines
+grep -i 'pattern' file name : to find the incentative cases
+grep -v 'pattern' file name : to reverse the condition
+grep -n 'pattern' file name : to find the lines and lines no
+grep -c 'pattern' file name : to print the matching lines
+grep -E 'pattern' file name : to extend and print or the values
+grep -r 'pattern' file name : to find the values recursively
+grep -w 'pattern' file name : to find the exact match
+grep 'A' 'pattern' file name : to find the values from the specific
+
+sed 'p' file name : to print the lines
+sed -n '3p' file name : to print the specific lines
+sed -n '4p,5p' file name : to print the multiple lines
+sed 'xyz /d' file name : to delete the lines which mentioned
+sed '/d' file name : to delete the specific lines
+sed 'li\ xyz xyz' file name : to add a new line in the file
+sed '3a\ xyz xyz' file name : to append the new line
+
+
+

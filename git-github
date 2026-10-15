@@ -1,0 +1,112 @@
+What is Git?
+Git is a Version Control System
+
+
+git init : initialize an empty repository
+git status : gives the information of the current state of the git repository
+git checkout -b 'branch name' : Switching to new branch if you want to switch to an existing branch then use git checkout branch with -b
+git add 'file name' : used to staged the untracked files
+git branch : gives the info / list of all the branches in git repo
+git commit -m "message" : to commit the files into git / used to track the staged files after being added by git add
+git remote -v : to check the remote repo
+git fetch : to update the git
+git pull : to update the local repo and pull from the remote repo
+git log : to check the commits and logs
+git log --oneline : to check the logs in oneline
+git branch 'name' : to create a new branch
+git branch -r : to check the branches on remote
+git switch 'name' : to switch to the new branch
+git switch -c 'name' : to create a new branch and switch to the new branch
+git push origin 'name' : to push the branches from local to remote
+git branch -d 'name' : to delete the branch from the local repo
+git push origin --delete 'name' : to delete the branches from the remote repo
+git merge 'name' : to merge the branch in main branch with history
+git rebase 'name' : to merge the branch in main branch without history
+git diff 'name' : to check the difference of branches
+
+
+. Git Stash & Pop
+
+git stash -u : to keep the file in the shelf, so we can work on other file
+git stash list : to list all the stash files
+git stash pop : to bring back the stash files
+git stash save "Message" : to add the files in stash after git add
+git stash pop "stash id" : to bring back the specific stash file
+
+
+. Git Cherry Pick 
+
+First we need to switch to the main branch
+
+git cherry-pick "commit id" : to merge a specific file from other branch to main branch
+git cherry-pick "first commit id"^"last commit id" : to merge the multiple files from other branch to main branch
+
+
+. Git Tags
+
+git tag "tag name v.1.2" : to tag the latest commit
+git tag : to list the tags
+git push origin "tag name" : to push the tag from local to remote repo
+git tag -a "tag name -m" "message" : to push the tag from local to remote repo
+git tag -a "tag name" commit id -m "message" : to push a specific tag to the remote repo
+git tag -d "tag name" : to delete the tag from local
+git push origin --delete "tag name" : to delete the tags from the remote repo
+
+
+. Git Squash
+
+git rebase -i HEAD~5 : to merge multiple commits into single commit
+                     : in terminal need to replace the pick to s/squash and first commit will remain pick as we need to combined the commits into first commit
+		     : then we need to write a message for the commit
+git commit --amend : to modify the latest commit message
+git rebase -i HEDA~5 : to modify the commit message for specific commit
+                     : in terminal which commit message need to change update the message before commit id and save
+		     : in new terminal change/update the message it will save
+git push --force : to push the change on the remote repo
+
+
+. Git Revert
+
+git revert "commit id" : to revert the changes
+                       : in terminal provide a message
+                       : an extra commit will be added to maintain history
+
+
+. Git Reset
+
+there are 3 modes of reset --hard reset, --mixed reset, --soft reset
+
+- Hard Reset
+
+git reset "file name" : to remove the file from staging area
+git reset --hard : to remove all the files from the staging & delete
+git reset --hard HEAD~2 : to remove or delete the commits and point head to the mentioned commit id 
+git reset --hard "commit id" : to remove or delete commits and point head to the mentioned commit id
+git push origin main --force : to push the changes forcefully to remote repo
+
+- Mixed Reset
+
+git reset --mixed HEAD~1 : to move the head and the file will be move from commit to work directory
+git reset --mixed "commit id" : to move the head and remove the files from commit and add them to work directory
+git push --force : to push the changes to remote repo
+
+- Soft Reset
+
+git reset --soft HEAD~1 : to move the head and modify the commit message and move the file to staging area
+git reset --soft "commit id" : to move the head and modify the commit message and move the file to staging area
+git reset --soft "commit id" : to combined the commits in one go 
+git push origin main --force : to push the changes to remote repo
+
+
+. Git Ignore
+
+first create a .gitignore file to apply the rule
+
+eg: 
+    build/
+    *.env
+    *.log
+    *.txt : to ignore this extension files to push on repo
+
+then we need add the files in staging area using git add, then you can see only files without this extension they will be ignore by git   
+
