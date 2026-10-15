@@ -44,3 +44,16 @@ Operator  Meaning
 -ge       greater than or equal to
 -le       less than or equal to
 
+Example:
+
+AGE=20
+
+if [ "$AGE" -ge 18 ]
+then
+    echo "You are an adult"
+else
+    echo "You are under 18"
+fi
+
+Output: You are an adult
+
