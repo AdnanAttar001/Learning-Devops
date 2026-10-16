@@ -1,0 +1,80 @@
+***** for loop *****
+
+for = for each item.
+
+for loop: Use it when you want to repeat something for a list of items or a known number of times.
+
+#!/bin/bash
+
+for i in 1 2 3 4 5
+do
+    echo "Number is $i"
+done
+
+#!/bin/bash -> Run the script using Bash.
+for i in 1 2 3 4 5 -> Take each number one by one and store it in i.
+do -> Start the commands to repeat.
+echo "Number is $i" -> Print the current number.
+done -> Finish the loop and move to the next number, if any.
+
+$i means the current value stored in the variable i.
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+#!/bin/bash
+
+for service in nginx docker
+do
+    if systemctl is-active --quiet "$service"; then
+        echo "$service is running"
+    else
+        echo "$service is not running"
+    fi
+done
+
+This checks the nginx and docker services one by one. Service names can differ by Linux distribution, so verify the names on your server.
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+***** while loop *****
+
+while = while a condition is true.
+
+while loop: Use it when you want to repeat something as long as a condition is true.
+
+#!/bin/bash
+
+i=1
+
+while [ "$i" -le 5 ]
+do
+    echo "Number is $i"
+    i=$((i + 1))
+done
+
+i=1 -> Start with the number 1.
+while [ "$i" -le 5 ] -> Continue while i is less than or equal to 5.
+do -> Start the repeated commands.
+echo "Number is $i" -> Print the current number.
+i=$((i + 1)) -> Increase i by 1.
+done -> Return to the condition and check it again.
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+#!/bin/bash
+
+FILE="/tmp/ready.txt"
+
+while [ ! -f "$FILE" ]
+do
+    echo "Waiting for the file..."
+    sleep 2
+done
+
+echo "File found!"
+
+-f "$FILE" -> checks whether the file exists and is a regular file.
+! means NOT.
+sleep 2 waits for two seconds.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
