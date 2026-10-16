@@ -34,6 +34,19 @@ done
 
 This checks the nginx and docker services one by one. Service names can differ by Linux distribution, so verify the names on your server.
 
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+Print even numbers
+
+#!/bin/bash
+
+for i in {2..10..2}
+do
+    echo "$i"
+done
+
+The {2..10..2} range means start at 2, end at 10, and increase by 2 each time.
+
 ----------------------------------------------------------------------------------------------------------------------------------------
 
 ***** while loop *****
@@ -61,6 +74,8 @@ done -> Return to the condition and check it again.
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
+Wait until a file exists
+
 #!/bin/bash
 
 FILE="/tmp/ready.txt"
@@ -78,3 +93,20 @@ echo "File found!"
 sleep 2 waits for two seconds.
 
 -----------------------------------------------------------------------------------------------------------------------------------------
+
+Read numbers until the user enters zero
+
+#!/bin/bash
+
+number=1
+
+while [ "$number" -ne 0 ]
+do
+    read -r -p "Enter a number (0 to exit): " number
+    echo "You entered: $number"
+done
+
+echo "Program stopped."
+
+read -r -> takes input from the user. The loop continues until the entered number is zero.
+
