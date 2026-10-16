@@ -4,6 +4,8 @@ for = for each item.
 
 for loop: Use it when you want to repeat something for a list of items or a known number of times.
 
+----------------------------------------------------------------------------------------------------------------------------------------
+
 Print numbers from 1 to 5
 
 #!/bin/bash
@@ -58,6 +60,8 @@ The {2..10..2} range means start at 2, end at 10, and increase by 2 each time.
 while = while a condition is true.
 
 while loop: Use it when you want to repeat something as long as a condition is true.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
 
 Print numbers from 1 to 5
 
