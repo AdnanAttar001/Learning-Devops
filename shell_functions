@@ -2,6 +2,16 @@
 
 A function in shell scripting is a block of code that you write once and use many times whenever you need it.
 
+function_name() {
+    # Commands to execute
+}
+
+function_name
+
+function_name() defines the function.
+{ } contains the commands.
+- function_name at the bottom calls the function.
+
 ------------------------------------------------------------------------------------------------------------
 Simple greeting function : 
 
