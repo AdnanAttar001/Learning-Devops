@@ -2,6 +2,8 @@
 
 A function in shell scripting is a block of code that you write once and use many times whenever you need it.
 
+Basic Structure:
+
 function_name() {
     # Commands to execute
 }
