@@ -1,0 +1,64 @@
+***** Functions *****
+
+A function in shell scripting is a block of code that you write once and use many times whenever you need it.
+
+------------------------------------------------------------------------------------------------------------
+Simple greeting function : 
+
+#!/bin/bash
+
+hello() {
+    echo "Welcome to Linux"
+}
+
+hello
+
+#!/bin/bash -> Runs the script using Bash.
+hello () -> Defines a function named hello.
+{ -> Starts the function body.
+echo "Welcome to Linux" -> Prints a message.
+} -> Ends the function body.
+hello Calls the function to execute it.
+
+------------------------------------------------------------------------------------------------------------
+Function with arguments:
+
+#!/bin/bash
+
+show_details() {
+    echo "Name: $1"
+    echo "Age: $2"
+    echo "City: $3"
+}
+
+show_details Adnan 28 Pune
+
+$1 Adnan
+$2 28
+$3 Pune
+
+When you call show_details Adnan 28 Pune, the values are passed into the function in order.
+
+-----------------------------------------------------------------------------------------------------------
+Function with an if-else statement
+
+#!/bin/bash
+
+check_service() {
+    SERVICE="nginx"
+
+    if systemctl is-active --quiet "$SERVICE"; then
+        echo "$SERVICE is running"
+    else
+        echo "$SERVICE is not running"
+    fi
+}
+
+check_service
+
+check_service() defines the function.
+SERVICE="nginx" stores the service name.
+if checks whether Nginx is active.
+echo displays the result.
+check_service executes the function.
+
