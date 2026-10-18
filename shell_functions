@@ -74,3 +74,24 @@ if checks whether Nginx is active.
 echo displays the result.
 check_service executes the function.
 
+----------------------------------------------------------------------------------------------------------
+Use two functions together
+
+#!/bin/bash
+
+show_welcome() {
+    echo "Welcome to Linux Monitoring"
+}
+
+show_date() {
+    date
+}
+
+start_monitoring() {
+    show_welcome
+    show_date
+    echo "Monitoring started"
+}
+
+start_monitoring
+
